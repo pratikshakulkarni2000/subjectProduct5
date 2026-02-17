@@ -1,0 +1,6 @@
+<p>{{msg || "Are you sure to remove this?"}}</p>
+
+<div class="d-flex justify-content-between">
+    <button mat-raised-button color="primary" (click)="onClose(true)">Yes</button>
+    <button mat-raised-button color="warn" (click)="onClose(false)">No</button>
+</div>
