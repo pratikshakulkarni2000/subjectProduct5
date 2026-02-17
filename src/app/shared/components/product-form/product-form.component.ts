@@ -22,6 +22,7 @@ export class ProductFormComponent implements OnInit {
     this.createForm()
     this.patchVAlue()
   }
+ 
 
   createForm(){
     this.prodForm = new FormGroup({
@@ -41,6 +42,8 @@ export class ProductFormComponent implements OnInit {
       console.log(obj);
 
       this._prodService.createProd(obj).subscribe(res => {
+        console.log(res);
+        
         this.prodForm.reset()
 
         this._prodService.setNewPro({...obj,id : res.name})

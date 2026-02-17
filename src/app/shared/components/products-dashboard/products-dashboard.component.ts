@@ -22,6 +22,10 @@ export class ProductsDashboardComponent implements OnInit {
     this.onRemove()
   }
 
+   trackById(index : number,i:Iproduct){
+    return i.id
+  }
+
   fetchData(){
     this._service.fetchAllProducts().subscribe(res => {
       this.prodArr = res
